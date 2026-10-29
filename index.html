@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>10 Spin - Premium Gaming</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Outfit', 'Hind Siliguri', sans-serif;
+            background-color: #0b1120; /* Deep dark blue background */
+            color: #ffffff;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Splash Screen Styles */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1596838132731-3301c3fd4317?q=80&w=1000&auto=format&fit=crop') no-repeat center center/cover;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.8s ease, visibility 0.8s;
+        }
+        
+        .splash-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9));
+            z-index: -1;
+        }
+
+        .gold-text {
+            background: linear-gradient(to right, #fbbf24, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0px 4px 15px rgba(245, 158, 11, 0.3);
+        }
+
+        /* Custom Loader Spinner */
+        .loader {
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-left-color: #f59e0b;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin-bottom: 15px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Hide Scrollbar */
+        ::-webkit-scrollbar { display: none; }
+
+        /* Bottom Nav Active State */
+        .nav-item.active {
+            color: #f59e0b;
+        }
+    </style>
+</head>
+<body class="pb-20">
+
+    <!-- ================= SPLASH SCREEN ================= -->
+    <div id="splash-screen">
+        <div class="splash-overlay"></div>
+        
+        <!-- Logo Area -->
+        <div class="text-center z-10 mb-20">
+            <h1 class="text-6xl font-extrabold tracking-widest gold-text mb-2">10 SPIN</h1>
+            <p class="text-gray-300 text-sm tracking-widest">PREMIUM GAMING</p>
+        </div>
+
+        <!-- Loading Area -->
+        <div class="absolute bottom-24 flex flex-col items-center z-10">
+            <div class="loader"></div>
+            <p class="text-white text-sm font-semibold mb-2">Loading...</p>
+            <p class="text-gray-400 text-xs">Trying to find the fastest line.</p>
+        </div>
+    </div>
+
+
+    <!-- ================= MAIN HOMEPAGE ================= -->
+    <div id="main-content" class="hidden opacity-0 transition-opacity duration-500">
+        
+        <!-- Top Header -->
+        <header class="flex items-center justify-between p-3 bg-[#151e32] sticky top-0 z-40 shadow-lg">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-bars text-gray-400 text-xl"></i>
+                <div class="text-xl font-extrabold tracking-wider gold-text ml-2">10 SPIN</div>
+            </div>
+            <div class="flex items-center gap-2">
+                <button class="px-3 py-1.5 text-sm font-semibold text-emerald-400 border border-emerald-500/30 rounded bg-emerald-500/10">লগইন</button>
+                <button class="px-3 py-1.5 text-sm font-bold rounded text-yellow-500 border border-yellow-500/50 bg-yellow-500/10">নিবন্ধন</button>
+                <i class="fa-solid fa-magnifying-glass text-gray-400 text-lg ml-1"></i>
+            </div>
+        </header>
+
+        <!-- Slider / Banner Section (Dummy) -->
+        <div class="p-3">
+            <div class="w-full h-40 bg-gradient-to-r from-blue-900 to-indigo-900 rounded-xl relative overflow-hidden flex items-center justify-center border border-gray-700 shadow-lg">
+                <!-- Background Effect -->
+                <div class="absolute inset-0 opacity-30 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+                <div class="z-10 text-center">
+                    <h2 class="text-3xl font-extrabold text-white mb-1"><span class="text-yellow-400">50%</span> বোনাস</h2>
+                    <p class="text-gray-300 text-sm">প্রথম ডিপোজিটে এখনই বোগ দিন</p>
+                </div>
+            </div>
+            <!-- Slider Dots -->
+            <div class="flex justify-center gap-1.5 mt-3">
+                <div class="w-2 h-2 rounded-full bg-yellow-500"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+            </div>
+        </div>
+
+        <!-- Notification Bar -->
+        <div class="px-4 py-2 flex justify-between items-center bg-[#151e32] mx-3 rounded-lg border border-gray-800">
+            <div class="flex items-center gap-2 text-sm text-gray-300">
+                <i class="fa-solid fa-bell text-yellow-500"></i>
+                <span>রিচার্জের সময় হয়নি</span>
+            </div>
+            <i class="fa-solid fa-envelope text-blue-400"></i>
+        </div>
+
+        <!-- Categories Tab -->
+        <div class="mt-4 border-b border-gray-800">
+            <div class="flex overflow-x-auto gap-6 px-4 pb-2 text-sm font-semibold text-gray-400">
+                <div class="flex flex-col items-center text-yellow-500 border-b-2 border-yellow-500 pb-1 min-w-max">
+                    <i class="fa-solid fa-fire text-lg mb-1"></i>
+                    <span>গরম</span>
+                </div>
+                <div class="flex flex-col items-center min-w-max">
+                    <i class="fa-solid fa-dice text-lg mb-1"></i>
+                    <span>স্লট</span>
+                </div>
+                <div class="flex flex-col items-center min-w-max">
+                    <i class="fa-solid fa-fish text-lg mb-1"></i>
+                    <span>ফিশিং</span>
+                </div>
+                <div class="flex flex-col items-center min-w-max">
+                    <i class="fa-solid fa-clover text-lg mb-1"></i>
+                    <span>লাইভ</span>
+                </div>
+                <div class="flex flex-col items-center min-w-max">
+                    <i class="fa-solid fa-futbol text-lg mb-1"></i>
+                    <span>স্পোর্টস</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Grid Section -->
+        <div class="p-4">
+            <div class="flex items-center gap-2 mb-4">
+                <i class="fa-solid fa-fire text-red-500"></i>
+                <h2 class="text-lg font-bold">গরম খেলা</h2>
+            </div>
+
+            <!-- Grid Layout (3 Columns) -->
+            <div class="grid grid-cols-3 gap-2">
+                
+                <!-- Game Card 1 -->
+                <div class="bg-[#1e293b] rounded-lg overflow-hidden relative shadow-md">
+                    <div class="h-28 bg-gray-700 flex items-center justify-center">
+                        <span class="text-xs text-gray-500">Image 1</span>
+                    </div>
+                    <div class="p-1 text-center bg-[#0f172a]">
+                        <p class="text-[11px] font-bold text-white truncate">Super Ace</p>
+                        <p class="text-[9px] text-gray-400">JILI</p>
+                    </div>
+                    <i class="fa-solid fa-star absolute top-1 right-1 text-gray-500 text-[10px]"></i>
+                </div>
+
+                <!-- Game Card 2 -->
+                <div class="bg-[#1e293b] rounded-lg overflow-hidden relative shadow-md">
+                    <div class="h-28 bg-gray-700 flex items-center justify-center">
+                        <span class="text-xs text-gray-500">Image 2</span>
+                    </div>
+                    <div class="p-1 text-center bg-[#0f172a]">
+                        <p class="text-[11px] font-bold text-white truncate">Aviator</p>
+                        <p class="text-[9px] text-gray-400">Spribe</p>
+                    </div>
+                    <i class="fa-solid fa-star absolute top-1 right-1 text-gray-500 text-[10px]"></i>
+                </div>
+
+                <!-- Game Card 3 -->
+                <div class="bg-[#1e293b] rounded-lg overflow-hidden relative shadow-md">
+                    <div class="h-28 bg-gray-700 flex items-center justify-center">
+                        <span class="text-xs text-gray-500">Image 3</span>
+                    </div>
+                    <div class="p-1 text-center bg-[#0f172a]">
+                        <p class="text-[11px] font-bold text-white truncate">Dragon Gems</p>
+                        <p class="text-[9px] text-gray-400">Yellow Bat</p>
+                    </div>
+                    <i class="fa-solid fa-star absolute top-1 right-1 text-gray-500 text-[10px]"></i>
+                </div>
+
+                <!-- Game Card 4 -->
+                <div class="bg-[#1e293b] rounded-lg overflow-hidden relative shadow-md">
+                    <div class="h-28 bg-gray-700 flex items-center justify-center">
+                        <span class="text-xs text-gray-500">Image 4</span>
+                    </div>
+                    <div class="p-1 text-center bg-[#0f172a]">
+                        <p class="text-[11px] font-bold text-white truncate">Fortune Gems</p>
+                        <p class="text-[9px] text-gray-400">JILI</p>
+                    </div>
+                    <i class="fa-solid fa-star absolute top-1 right-1 text-gray-500 text-[10px]"></i>
+                </div>
+
+                <!-- Game Card 5 -->
+                <div class="bg-[#1e293b] rounded-lg overflow-hidden relative shadow-md">
+                    <div class="h-28 bg-gray-700 flex items-center justify-center">
+                        <span class="text-xs text-gray-500">Image 5</span>
+                    </div>
+                    <div class="p-1 text-center bg-[#0f172a]">
+                        <p class="text-[11px] font-bold text-white truncate">Boxing King</p>
+                        <p class="text-[9px] text-gray-400">JILI</p>
+                    </div>
+                    <i class="fa-solid fa-star absolute top-1 right-1 text-gray-500 text-[10px]"></i>
+                </div>
+
+                <!-- Game Card 6 -->
+                <div class="bg-[#1e293b] rounded-lg overflow-hidden relative shadow-md">
+                    <div class="h-28 bg-gray-700 flex items-center justify-center">
+                        <span class="text-xs text-gray-500">Image 6</span>
+                    </div>
+                    <div class="p-1 text-center bg-[#0f172a]">
+                        <p class="text-[11px] font-bold text-white truncate">Money Coming</p>
+                        <p class="text-[9px] text-gray-400">JILI</p>
+                    </div>
+                    <i class="fa-solid fa-star absolute top-1 right-1 text-gray-500 text-[10px]"></i>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ================= BOTTOM NAVIGATION ================= -->
+    <div class="fixed bottom-0 w-full bg-[#151e32] border-t border-gray-800 flex justify-around items-center h-16 z-50 px-2">
+        <div class="flex flex-col items-center nav-item active w-1/5">
+            <i class="fa-solid fa-house text-xl mb-1"></i>
+            <span class="text-[10px] font-semibold">হোম</span>
+        </div>
+        <div class="flex flex-col items-center nav-item text-gray-500 w-1/5">
+            <i class="fa-solid fa-gift text-xl mb-1"></i>
+            <span class="text-[10px] font-semibold">প্রমোশন</span>
+        </div>
+        
+        <!-- Center Special Button -->
+        <div class="w-1/5 flex justify-center relative -top-4">
+            <div class="w-14 h-14 rounded-full bg-emerald-500 flex items-center justify-center border-4 border-[#0b1120] shadow-[0_0_15px_rgba(16,185,129,0.5)]">
+                <span class="text-white font-bold text-xl">৳</span>
+            </div>
+        </div>
+
+        <div class="flex flex-col items-center nav-item text-gray-500 w-1/5">
+            <i class="fa-solid fa-medal text-xl mb-1"></i>
+            <span class="text-[10px] font-semibold">পুরস্কার</span>
+        </div>
+        <div class="flex flex-col items-center nav-item text-gray-500 w-1/5">
+            <i class="fa-solid fa-user text-xl mb-1"></i>
+            <span class="text-[10px] font-semibold">সদস্যরা</span>
+        </div>
+    </div>
+
+    <!-- Javascript for Splash Screen Logic -->
+    <script>
+        // Wait for the page to load
+        window.addEventListener('load', () => {
+            // Keep the splash screen for 2.5 seconds
+            setTimeout(() => {
+                const splash = document.getElementById('splash-screen');
+                const mainContent = document.getElementById('main-content');
+                
+                // Fade out splash
+                splash.style.opacity = '0';
+                splash.style.visibility = 'hidden';
+                
+                // Show main content
+                mainContent.classList.remove('hidden');
+                
+                // Small delay for smooth transition
+                setTimeout(() => {
+                    mainContent.classList.remove('opacity-0');
+                    mainContent.classList.add('opacity-100');
+                }, 100);
+
+            }, 2500); // 2500 milliseconds = 2.5 seconds
+        });
+    </script>
+</body>
+</html>
