@@ -72,6 +72,14 @@
         .nav-item.active {
             color: #f59e0b;
         }
+
+        /* Game Card Image Hover Effect */
+        .game-img {
+            transition: transform 0.3s ease;
+        }
+        .game-card:hover .game-img {
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body class="pb-20">
@@ -111,10 +119,9 @@
             </div>
         </header>
 
-        <!-- Slider / Banner Section (Dummy) -->
+        <!-- Slider / Banner Section -->
         <div class="p-3">
             <div class="w-full h-40 bg-gradient-to-r from-blue-900 to-indigo-900 rounded-xl relative overflow-hidden flex items-center justify-center border border-gray-700 shadow-lg">
-                <!-- Background Effect -->
                 <div class="absolute inset-0 opacity-30 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
                 <div class="z-10 text-center">
                     <h2 class="text-3xl font-extrabold text-white mb-1"><span class="text-yellow-400">50%</span> বোনাস</h2>
@@ -176,73 +183,109 @@
             <div class="grid grid-cols-3 gap-2">
                 
                 <!-- Game Card 1 -->
-                <div class="bg-[#1e293b] rounded-lg overflow-hidden relative shadow-md">
-                    <div class="h-28 bg-gray-700 flex items-center justify-center">
-                        <span class="text-xs text-gray-500">Image 1</span>
+                <div class="game-card bg-[#1e293b] rounded-lg overflow-hidden relative shadow-md cursor-pointer">
+                    <div class="h-28 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1596838132731-3301c3fd4317?q=80&w=300&auto=format&fit=crop" alt="Super Ace" class="w-full h-full object-cover game-img">
                     </div>
                     <div class="p-1 text-center bg-[#0f172a]">
-                        <p class="text-[11px] font-bold text-white truncate">Super Ace</p>
+                        <p class="text-[11px] font-bold text-white truncate">সুপার এইস</p>
                         <p class="text-[9px] text-gray-400">JILI</p>
                     </div>
                     <i class="fa-solid fa-star absolute top-1 right-1 text-gray-500 text-[10px]"></i>
                 </div>
 
                 <!-- Game Card 2 -->
-                <div class="bg-[#1e293b] rounded-lg overflow-hidden relative shadow-md">
-                    <div class="h-28 bg-gray-700 flex items-center justify-center">
-                        <span class="text-xs text-gray-500">Image 2</span>
+                <div class="game-card bg-[#1e293b] rounded-lg overflow-hidden relative shadow-md cursor-pointer">
+                    <div class="h-28 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?q=80&w=300&auto=format&fit=crop" alt="Aviator" class="w-full h-full object-cover game-img">
                     </div>
                     <div class="p-1 text-center bg-[#0f172a]">
-                        <p class="text-[11px] font-bold text-white truncate">Aviator</p>
+                        <p class="text-[11px] font-bold text-white truncate">এভিয়েটর</p>
                         <p class="text-[9px] text-gray-400">Spribe</p>
                     </div>
                     <i class="fa-solid fa-star absolute top-1 right-1 text-gray-500 text-[10px]"></i>
                 </div>
 
                 <!-- Game Card 3 -->
-                <div class="bg-[#1e293b] rounded-lg overflow-hidden relative shadow-md">
-                    <div class="h-28 bg-gray-700 flex items-center justify-center">
-                        <span class="text-xs text-gray-500">Image 3</span>
+                <div class="game-card bg-[#1e293b] rounded-lg overflow-hidden relative shadow-md cursor-pointer">
+                    <div class="h-28 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?q=80&w=300&auto=format&fit=crop" alt="Dragon Gems" class="w-full h-full object-cover game-img">
                     </div>
                     <div class="p-1 text-center bg-[#0f172a]">
-                        <p class="text-[11px] font-bold text-white truncate">Dragon Gems</p>
-                        <p class="text-[9px] text-gray-400">Yellow Bat</p>
+                        <p class="text-[11px] font-bold text-white truncate">ড্রাগন রত্ন ৫০০</p>
+                        <p class="text-[9px] text-gray-400">YELLOW BAT</p>
                     </div>
                     <i class="fa-solid fa-star absolute top-1 right-1 text-gray-500 text-[10px]"></i>
                 </div>
 
                 <!-- Game Card 4 -->
-                <div class="bg-[#1e293b] rounded-lg overflow-hidden relative shadow-md">
-                    <div class="h-28 bg-gray-700 flex items-center justify-center">
-                        <span class="text-xs text-gray-500">Image 4</span>
+                <div class="game-card bg-[#1e293b] rounded-lg overflow-hidden relative shadow-md cursor-pointer">
+                    <div class="h-28 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?q=80&w=300&auto=format&fit=crop" alt="Fortune Gems" class="w-full h-full object-cover game-img">
                     </div>
                     <div class="p-1 text-center bg-[#0f172a]">
-                        <p class="text-[11px] font-bold text-white truncate">Fortune Gems</p>
+                        <p class="text-[11px] font-bold text-white truncate">ফারচুন জেমস</p>
                         <p class="text-[9px] text-gray-400">JILI</p>
                     </div>
                     <i class="fa-solid fa-star absolute top-1 right-1 text-gray-500 text-[10px]"></i>
                 </div>
 
                 <!-- Game Card 5 -->
-                <div class="bg-[#1e293b] rounded-lg overflow-hidden relative shadow-md">
-                    <div class="h-28 bg-gray-700 flex items-center justify-center">
-                        <span class="text-xs text-gray-500">Image 5</span>
+                <div class="game-card bg-[#1e293b] rounded-lg overflow-hidden relative shadow-md cursor-pointer">
+                    <div class="h-28 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=300&auto=format&fit=crop" alt="Boxing King" class="w-full h-full object-cover game-img">
                     </div>
                     <div class="p-1 text-center bg-[#0f172a]">
-                        <p class="text-[11px] font-bold text-white truncate">Boxing King</p>
+                        <p class="text-[11px] font-bold text-white truncate">বক্সিং কিং</p>
                         <p class="text-[9px] text-gray-400">JILI</p>
                     </div>
                     <i class="fa-solid fa-star absolute top-1 right-1 text-gray-500 text-[10px]"></i>
                 </div>
 
                 <!-- Game Card 6 -->
-                <div class="bg-[#1e293b] rounded-lg overflow-hidden relative shadow-md">
-                    <div class="h-28 bg-gray-700 flex items-center justify-center">
-                        <span class="text-xs text-gray-500">Image 6</span>
+                <div class="game-card bg-[#1e293b] rounded-lg overflow-hidden relative shadow-md cursor-pointer">
+                    <div class="h-28 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1621504450181-5d356f61d307?q=80&w=300&auto=format&fit=crop" alt="Money Coming" class="w-full h-full object-cover game-img">
                     </div>
                     <div class="p-1 text-center bg-[#0f172a]">
-                        <p class="text-[11px] font-bold text-white truncate">Money Coming</p>
+                        <p class="text-[11px] font-bold text-white truncate">মানি কামিং</p>
                         <p class="text-[9px] text-gray-400">JILI</p>
+                    </div>
+                    <i class="fa-solid fa-star absolute top-1 right-1 text-gray-500 text-[10px]"></i>
+                </div>
+
+                <!-- Game Card 7 -->
+                <div class="game-card bg-[#1e293b] rounded-lg overflow-hidden relative shadow-md cursor-pointer">
+                    <div class="h-28 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1596838132731-3301c3fd4317?q=80&w=300&auto=format&fit=crop" alt="Wild Bounty" class="w-full h-full object-cover game-img">
+                    </div>
+                    <div class="p-1 text-center bg-[#0f172a]">
+                        <p class="text-[11px] font-bold text-white truncate">বন্য বাউন্টি</p>
+                        <p class="text-[9px] text-gray-400">Pocket Games</p>
+                    </div>
+                    <i class="fa-solid fa-star absolute top-1 right-1 text-gray-500 text-[10px]"></i>
+                </div>
+
+                <!-- Game Card 8 -->
+                <div class="game-card bg-[#1e293b] rounded-lg overflow-hidden relative shadow-md cursor-pointer">
+                    <div class="h-28 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1605806616949-1e87b487cb2a?q=80&w=300&auto=format&fit=crop" alt="Super Elements" class="w-full h-full object-cover game-img">
+                    </div>
+                    <div class="p-1 text-center bg-[#0f172a]">
+                        <p class="text-[11px] font-bold text-white truncate">সুপার এলিমেন্টস</p>
+                        <p class="text-[9px] text-gray-400">FA CHAI</p>
+                    </div>
+                    <i class="fa-solid fa-star absolute top-1 right-1 text-gray-500 text-[10px]"></i>
+                </div>
+
+                <!-- Game Card 9 -->
+                <div class="game-card bg-[#1e293b] rounded-lg overflow-hidden relative shadow-md cursor-pointer">
+                    <div class="h-28 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?q=80&w=300&auto=format&fit=crop" alt="Crazy Time" class="w-full h-full object-cover game-img">
+                    </div>
+                    <div class="p-1 text-center bg-[#0f172a]">
+                        <p class="text-[11px] font-bold text-white truncate">ক্রেজি টাইম</p>
+                        <p class="text-[9px] text-gray-400">Evolution</p>
                     </div>
                     <i class="fa-solid fa-star absolute top-1 right-1 text-gray-500 text-[10px]"></i>
                 </div>
@@ -254,27 +297,27 @@
 
     <!-- ================= BOTTOM NAVIGATION ================= -->
     <div class="fixed bottom-0 w-full bg-[#151e32] border-t border-gray-800 flex justify-around items-center h-16 z-50 px-2">
-        <div class="flex flex-col items-center nav-item active w-1/5">
+        <div class="flex flex-col items-center nav-item active w-1/5 cursor-pointer">
             <i class="fa-solid fa-house text-xl mb-1"></i>
             <span class="text-[10px] font-semibold">হোম</span>
         </div>
-        <div class="flex flex-col items-center nav-item text-gray-500 w-1/5">
+        <div class="flex flex-col items-center nav-item text-gray-500 w-1/5 cursor-pointer">
             <i class="fa-solid fa-gift text-xl mb-1"></i>
             <span class="text-[10px] font-semibold">প্রমোশন</span>
         </div>
         
         <!-- Center Special Button -->
-        <div class="w-1/5 flex justify-center relative -top-4">
+        <div class="w-1/5 flex justify-center relative -top-4 cursor-pointer">
             <div class="w-14 h-14 rounded-full bg-emerald-500 flex items-center justify-center border-4 border-[#0b1120] shadow-[0_0_15px_rgba(16,185,129,0.5)]">
                 <span class="text-white font-bold text-xl">৳</span>
             </div>
         </div>
 
-        <div class="flex flex-col items-center nav-item text-gray-500 w-1/5">
+        <div class="flex flex-col items-center nav-item text-gray-500 w-1/5 cursor-pointer">
             <i class="fa-solid fa-medal text-xl mb-1"></i>
             <span class="text-[10px] font-semibold">পুরস্কার</span>
         </div>
-        <div class="flex flex-col items-center nav-item text-gray-500 w-1/5">
+        <div class="flex flex-col items-center nav-item text-gray-500 w-1/5 cursor-pointer">
             <i class="fa-solid fa-user text-xl mb-1"></i>
             <span class="text-[10px] font-semibold">সদস্যরা</span>
         </div>
@@ -282,27 +325,22 @@
 
     <!-- Javascript for Splash Screen Logic -->
     <script>
-        // Wait for the page to load
         window.addEventListener('load', () => {
-            // Keep the splash screen for 2.5 seconds
             setTimeout(() => {
                 const splash = document.getElementById('splash-screen');
                 const mainContent = document.getElementById('main-content');
                 
-                // Fade out splash
                 splash.style.opacity = '0';
                 splash.style.visibility = 'hidden';
                 
-                // Show main content
                 mainContent.classList.remove('hidden');
                 
-                // Small delay for smooth transition
                 setTimeout(() => {
                     mainContent.classList.remove('opacity-0');
                     mainContent.classList.add('opacity-100');
                 }, 100);
 
-            }, 2500); // 2500 milliseconds = 2.5 seconds
+            }, 2500);
         });
     </script>
 </body>
